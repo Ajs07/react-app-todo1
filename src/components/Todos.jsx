@@ -3,7 +3,7 @@ import TodoItem from './TodoItem'
 
 const Todos = ({ todos }) => {
   return (
-    <div>
+    <div style={styles.container}>
     {/* Gunakan method map di sini 
       key={todo.id} seharusnya ditambahkan pada masing-masing elemen dalam sebuah array untuk memberikan identitas yang unik dan membantu React mendeteksi element mana yang telah di-render.*/}
       {todos.map((todo) => {
@@ -11,6 +11,13 @@ const Todos = ({ todos }) => {
       })}
     </div>
   )
+}
+
+const styles = {
+  container: {
+    width: '40%',
+    margin: '0 auto',
+  },
 }
 
 export default Todos
