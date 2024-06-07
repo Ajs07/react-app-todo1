@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Todos from './components/Todos'
 
 function App() {
   const [todos, setTodos] = useState([
@@ -22,11 +23,7 @@ function App() {
   return (
     <div>
       <h1>My Todo List</h1>
-      {/* Gunakan method map di sini 
-      key={todo.id} seharusnya ditambahkan pada masing-masing elemen dalam sebuah array untuk memberikan identitas yang unik dan membantu React mendeteksi element mana yang telah di-render.*/}
-      {todos.map((todo) => {
-        return <p key={todo.id}>{todo.title}</p>
-      })}
+      <Todos todos={todos}/>
     </div>
   )
 }
